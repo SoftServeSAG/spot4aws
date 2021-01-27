@@ -1,0 +1,27 @@
+{
+    "robots": [],
+    "server": {
+        "name": "SERVER",
+        "environmentVariables": {
+            "START_X": "2",
+            "START_Y": "10",
+            "START_YAW": "3.143",
+            "USE_CUSTOM_MOVE_OBJECT_GAZEBO_PLUGIN":"true",
+            "ROS_AWS_REGION": "us-west-2"
+        },
+        "robot_app":{
+            "packageName": "rs_config",
+            "launchFile": "navigate.launch",
+            "environmentVariables": {
+                "ADD_PARAM":"1"
+            }
+        },
+        "simulation_app": {
+            "packageName": "robot_fleet",
+            "launchFile": "robot_fleet_rosbridge.launch",
+            "environmentVariables": {
+                "ADD_PARAM":"1"
+            }
+        }
+      }
+}
