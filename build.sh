@@ -9,13 +9,15 @@ ROS_APP_DIR=$BASE_DIR/simulation_ws
 ROS_ROBOT_DIR=$BASE_DIR/robot_ws
 
 cd $ROS_APP_DIR
-# rosws update
+rosws update
+./install_additional_deps.sh
 rosdep install --from-paths src --ignore-src -r -y
 colcon build  
 colcon bundle
 
 cd $ROS_ROBOT_DIR
-# rosws update
+rosws update
+./install_additional_deps.sh
 rosdep install --from-paths src --ignore-src -r -y
 colcon build  
 colcon bundle

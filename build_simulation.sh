@@ -7,8 +7,8 @@ echo "##########################################################################
 BASE_DIR=`pwd`
 ROS_APP_DIR=$BASE_DIR/simulation_ws
 cd $ROS_APP_DIR
-# rosws update
-# ./install_additional_deps.sh
+rosws update
+./install_additional_deps.sh
 rosdep install --from-paths src --ignore-src -r -y
 colcon build  
 colcon bundle
