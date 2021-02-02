@@ -37,20 +37,3 @@ else
 fi
 
 
-echo "###############################################################################"
-echo " Clone HQ office world "
-echo "###############################################################################"
-
-
-if [ -d "rs_gazebo" ] 
-then
-    echo "Directory rs_gazebo exists." 
-else
-    mkdir rs_gazebo
-    cd rs_gazebo
-    git init
-    git remote add spot_simulation https://github.com/SoftServeSAG/spot_simulation.git
-    git fetch spot_simulation
-    git checkout spot_simulation/spot_control -- rs_gazebo
-fi
-
