@@ -11,4 +11,6 @@ source install/setup.sh
 export START_X=0.5
 export START_Y=0.5
 export START_YAW=0
-roslaunch rs_tests straight_line_test.launch gui:=true
+export MODEL_NAME=/
+export SIM_TIMEOUT_SECONDS=1000
+roslaunch rs_tests navigation_test.launch gui:=true
