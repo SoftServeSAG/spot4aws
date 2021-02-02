@@ -1,10 +1,10 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(rs_config)
+project(rs_navigation)
 
 find_package(catkin REQUIRED COMPONENTS)
 
 catkin_package()
 
-install(DIRECTORY launch config maps
+install(DIRECTORY launch maps
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )

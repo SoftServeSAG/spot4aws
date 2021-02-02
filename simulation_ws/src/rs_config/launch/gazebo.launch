@@ -1,6 +1,7 @@
 <launch>
     <arg name="robot_name"         default="/"/> <!-- Change this for namespacing. -->
     <arg name="rviz"               default="false"/> <!-- Set to true to run rviz in parallel. -->
+    <arg name="gui"                default="true" />
     <arg name="lite"               default="false" />  <!-- Set to true if you're using CHAMP lite version. Only useful for microcontrollers. -->
     <arg name="ros_control_file"   default="$(find spot_config)/config/ros_control/ros_control.yaml" /> <!-- Path to ROS Control configurations. Do not touch. -->
     <arg name="gazebo_world"       default="$(find rs_gazebo)/worlds/ss_hq4.world" /> <!-- Path to Gazebo world you want to load. -->
@@ -21,6 +22,7 @@
 
     <include file="$(find champ_gazebo)/launch/gazebo.launch">
         <arg name="robot_name"         value="$(arg robot_name)"/>
+        <arg name="gui"                value="$(arg gui)" />
         <arg name="lite"               value="$(arg lite)"/>
         <arg name="ros_control_file"   value="$(arg ros_control_file)"/>
         <arg name="gazebo_world"       value="$(arg gazebo_world)"/>

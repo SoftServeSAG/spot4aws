@@ -1,2 +1,6 @@
 - git: {local-name: src/deps/yocs_velocity_smoother, uri: "https://github.com/chvmp/yocs_velocity_smoother", version: "master"}
 - git: {local-name: src/deps/champ, uri: "https://github.com/chvmp/champ", version: "master"}
+- git:
+    local-name: src/deps/aws-robomaker-hospital-world
+    uri: https://github.com/aws-robotics/aws-robomaker-hospital-world.git
+    version: master

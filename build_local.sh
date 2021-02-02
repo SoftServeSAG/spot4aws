@@ -1,7 +1,7 @@
 
 echo "###############################################################################"
-echo " CLOUD SUMMIT WORKSHOP: RUNNING COLCON BUILD AND BUNDLE (Open this shell script for command reference) "
-echo " NOTE: This will take 10-20 minutes for the first build/bundle, 1-2 minutes for subsequent build/bundle operations. "
+echo " RUNNING COLCON BUILD "
+echo " NOTE: This will take 10-20 minutes for the first build, 1-2 minutes for subsequent build operations. "
 echo "###############################################################################"
 
 BASE_DIR=`pwd`
@@ -12,10 +12,12 @@ cd $ROS_APP_DIR
 rosws update
 ./install_additional_deps.sh
 rosdep install --from-paths src --ignore-src -r -y
-colcon build
+colcon build --cmake-clean-cache --cmake-clean-first
+source install/setup.sh
 
 cd $ROS_ROBOT_DIR
 rosws update
 ./install_additional_deps.sh
 rosdep install --from-paths src --ignore-src -r -y
-colcon build
+colcon build --cmake-clean-cache --cmake-clean-first
+source install/setup.sh
