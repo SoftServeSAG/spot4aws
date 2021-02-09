@@ -7,5 +7,5 @@
 
     <include file="$(find rs_navigation)/launch/navigate.launch" />
 
-    <include file="$(find test_standstill)/launch/standstill_test.launch" />
+    <include file="$(find mp_slippage_and_motor_saturation_tests)/launch/standstill_test.launch" />
 </launch>

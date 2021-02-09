@@ -14,4 +14,4 @@ export START_YAW=0.0
 export MODEL_NAME=/
 export SIM_TIME_END_SECONDS=150
 export START_TIME_SECONDS=5
-roslaunch rs_tests standstill_test.launch gui:=false
+roslaunch rs_tests standstill_test.launch gui:=true
