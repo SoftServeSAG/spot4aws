@@ -8,9 +8,10 @@ cd ..
 
 cd $ROS_APP_DIR
 source install/setup.sh
-export START_X=0.5
-export START_Y=0.5
+export START_X=10.5
+export START_Y=10.5
 export START_YAW=0.0
 export MODEL_NAME=/
-export SIM_TIMEOUT_SECONDS=100000
+export SIM_TIMEOUT_SECONDS=100
+export START_TIME_SECONDS=5
 roslaunch rs_tests straight_line_test.launch gui:=true

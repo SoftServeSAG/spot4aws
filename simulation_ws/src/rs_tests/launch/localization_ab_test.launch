@@ -1,0 +1,14 @@
+<launch>
+    <arg name="gui" default="false"/>
+    <arg name="rviz" default="false"/>
+
+    <include file="$(find rs_config)/launch/gazebo.launch" >
+        <arg name="gui" default="$(arg gui)" />
+    </include>
+
+    <include file="$(find rs_navigation)/launch/navigate.launch" >
+        <arg name="rviz" default="$(arg rviz)" />
+    </include>
+
+    <include file="$(find mp_localization_tests)/launch/localization_ab_test.launch" />
+</launch>
