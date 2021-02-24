@@ -2,6 +2,14 @@
     <arg name="robot_name" default="/"/>
     <arg name="rviz"       default="false"/>
 
+    <arg name="initial_pose_x" default="$(env START_X)" />
+    <arg name="initial_pose_y" default="$(env START_Y)" />
+    <arg name="initial_pose_a" default="$(env START_YAW)" />
+
+    <arg name="initial_cov_xx" default="0.25" />
+    <arg name="initial_cov_yy" default="0.25" />
+    <arg name="initial_cov_aa" default="0.524" />
+
     <arg if="$(eval arg('robot_name') == '/')"  name="frame_prefix" value="" />
     <arg unless="$(eval arg('robot_name') == '/')" name="frame_prefix" value="$(arg robot_name)/" />
 
@@ -12,8 +20,15 @@
             <param name="frame_id" value="$(arg frame_prefix)map" />
         </node>
         <!-- AMCL used for localization -->
-        <include file="$(find spot_config)/launch/include/amcl.launch">
+        <include file="$(find rs_navigation)/launch/amcl.launch">
             <arg name="frame_prefix" value="$(arg frame_prefix)"/>
+            <arg name="initial_pose_x" value="$(arg initial_pose_x)" />
+            <arg name="initial_pose_y" value="$(arg initial_pose_y)" />
+            <arg name="initial_pose_a" value="$(arg initial_pose_a)" />
+
+            <arg name="initial_cov_xx" value="$(arg initial_cov_xx)" />
+            <arg name="initial_cov_yy" value="$(arg initial_cov_yy)" />
+            <arg name="initial_cov_aa" value="$(arg initial_cov_aa)" />
         </include>
 
         <!-- Calls navigation stack -->

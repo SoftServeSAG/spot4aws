@@ -14,10 +14,6 @@ export START_YAW=0.0
 export MODEL_NAME=/
 export SIM_TIMEOUT_SECONDS=1500
 export START_TIME_SECONDS=5
-export GOAL_POSITION_TOLERANCE=1.0
-export GOAL_ORIENTATION_TOLERANCE=1.0
-export GOAL_POSITION_X=-1.6
-export GOAL_POSITION_Y=1.5
-export GOAL_ORIENTATION_YAW=3.1
+export ENVIRONMENT=LOCAL
 
-roslaunch rs_tests localization_ab_test.launch gui:=true rviz:=true
+roslaunch rs_tests navigation_ab_test.launch gui:=true rviz:=true
