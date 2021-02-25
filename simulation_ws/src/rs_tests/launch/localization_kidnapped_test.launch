@@ -1,0 +1,21 @@
+<launch>
+    <arg name="gui" default="false"/>
+
+    <param name="use_sim_time" value="true" />
+
+    <include file="$(find rs_config)/launch/gazebo.launch" >
+        <arg name="gui" default="$(arg gui)" />
+    </include>
+
+    <arg name="mode" default="dynamic"/>
+
+    <!-- launch with random goals on the map -->
+    <node pkg="softserve_simulation_common" type="move_base_route_manager.py" name="move_base_route_manager" output="screen">
+    </node>
+
+    <include file="$(find mp_planning_tests)/launch/navigation_ab_test.launch" >
+        <arg name="goal_position_tolerance" value="1.0" />
+        <arg name="goal_orientation_tolerance" value="1.0" />
+        <arg name="mode"  value="$(arg mode)"/>
+    </include>
+</launch>
