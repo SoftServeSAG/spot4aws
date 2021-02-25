@@ -7,8 +7,6 @@ AWS_PROFILE=default
 CURRENT_STACK=.current-aws-stack
 S3_OUTPUT_APP_KEY=spottestdemo/bundle/output.tar
 S3_OUTPUT_ROBOT_KEY=spottestdemorobot/bundle/output.tar
-STACK_NAME=spottestboro
-AWS_PROFILE=default
 
 echo "###############################################################################"
 echo " CLOUD SUMMIT WORKSHOP: RUNNING SIMULATION JOBS WITH JSON CONFIGURATION "

@@ -12,5 +12,7 @@
 
   <depend>mp_slippage_and_motor_saturation_tests</depend>
   <depend>mp_behaviour_tests</depend>
+  <depend>mp_planning_tests</depend>
+  <depend>softserve_simulation_common</depend>
 
 </package>

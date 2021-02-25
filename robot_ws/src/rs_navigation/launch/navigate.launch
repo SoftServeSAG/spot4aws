@@ -15,7 +15,7 @@
 
     <group ns="$(arg robot_name)">
         <!-- Map server -->
-        <arg name="map_file" default="$(find rs_config)/maps/ss_hq4.yaml"/>
+        <arg name="map_file" default="$(find rs_navigation)/maps/ss_hq4.yaml"/>
         <node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)" >
             <param name="frame_id" value="$(arg frame_prefix)map" />
         </node>

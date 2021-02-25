@@ -12,12 +12,12 @@ cd $ROS_APP_DIR
 rosws update
 ./install_additional_deps.sh
 rosdep install --from-paths src --ignore-src -r -y
-colcon build  
+colcon build --cmake-clean-cache --cmake-clean-first 
 colcon bundle
 
 cd $ROS_ROBOT_DIR
 rosws update
 ./install_additional_deps.sh
 rosdep install --from-paths src --ignore-src -r -y
-colcon build  
+colcon build --cmake-clean-cache --cmake-clean-first 
 colcon bundle
