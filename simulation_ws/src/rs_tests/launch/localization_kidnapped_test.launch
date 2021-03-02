@@ -10,7 +10,7 @@
         <arg name="gui" default="$(arg gui)" />
     </include>
 
-    <arg name="mode" default="dynamic"/>
+    <arg name="mode" default="inorder"/>
 
     <!-- launch with random goals on the map -->
     <node pkg="softserve_simulation_common" type="move_base_route_manager.py" name="move_base_route_manager" output="screen">

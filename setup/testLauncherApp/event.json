@@ -29,8 +29,8 @@
       "Scenario2":{
          "simEnvironmentVariables":{
             "MODEL_NAME":"/",
-            "START_X":"1",
-            "START_Y":"1",
+            "START_X":"-1.5",
+            "START_Y":"7.2",
             "START_Z":"0.0",
             "START_YAW":"1",
             "USE_CUSTOM_MOVE_OBJECT_GAZEBO_PLUGIN":"true",
@@ -41,8 +41,8 @@
          },
          "robotEnvironmentVariables":{
             "MODEL_NAME":"/",
-            "START_X":"1",
-            "START_Y":"1",
+            "START_X":"-1.5",
+            "START_Y":"7.2",
             "START_Z":"0.0",
             "START_YAW":"1",
             "USE_CUSTOM_MOVE_OBJECT_GAZEBO_PLUGIN":"true",
@@ -65,7 +65,7 @@
                {
                   "applicationVersion": "$LATEST",
                   "launchConfig":{
-                     "launchFile":"standstill_drive_a_to_a_test.launch",
+                     "launchFile":"localization_kidnapped_test.launch",
                      "packageName":"rs_tests"
                   }
                }
@@ -74,8 +74,8 @@
                {
                   "applicationVersion": "$LATEST",
                   "launchConfig":{
-                     "launchFile":"standstill_drive_a_to_a_test.launch",
-                     "packageName":"rs_tests"
+                     "launchFile":"localization_kidnapped_test.launch",
+                     "packageName":"rs_robot_tests"
                   }
                }
             ],
