@@ -1,0 +1,10 @@
+<launch>
+    <arg name="rviz" default="false"/>
+    
+    <param name="use_sim_time" value="true" />
+
+    <include file="$(find rs_navigation)/launch/navigate.launch" >
+        <arg name="rviz" default="$(arg rviz)" />
+    </include>
+
+</launch>

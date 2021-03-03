@@ -1,0 +1,32 @@
+<launch>
+    <arg name="gui" default="false"/>
+
+    <arg name="localization_position_tolerance" default="0.2" />
+    <arg name="localization_orientation_tolerance" default="0.2" />
+    <arg name="navigation_success_count" default="5"/>
+    <arg name="objects_count" default="5"/>
+
+    <param name="use_sim_time" value="true" />
+
+    <include file="$(find rs_config)/launch/gazebo.launch" >
+        <arg name="gui" default="$(arg gui)" />
+    </include>
+
+    <arg name="mode" default="dynamic"/>
+
+    <!-- launch with random goals on the map -->
+    <node pkg="softserve_simulation_common" type="move_base_route_manager.py" name="move_base_route_manager" output="screen">
+    </node>
+
+    <rosparam file="$(find rs_tests)/routes/route_hq_kidnapped.yaml" command="load"/>
+
+    <rosparam file="$(find rs_tests)/params/move_objects_hq_world.yaml" command="load"/>
+
+    <include file="$(find mp_localization_tests)/launch/localization_world_changes_test.launch" >
+        <arg name="localization_position_tolerance" value="$(arg localization_position_tolerance)" />
+        <arg name="localization_orientation_tolerance" value="$(arg localization_orientation_tolerance)" />
+        <arg name="navigation_success_count" value="$(arg navigation_success_count)"/>
+        <arg name="objects_count" value="$(arg objects_count)"/>
+        <arg name="mode"  value="$(arg mode)"/>
+    </include>
+</launch>
