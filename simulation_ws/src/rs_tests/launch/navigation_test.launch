@@ -13,9 +13,9 @@
     <!-- launch with random goals on the map -->
     <node pkg="softserve_simulation_common" type="move_base_route_manager.py" name="move_base_route_manager" output="screen"/>
 
-    <!--  -->
+    <!-- <rosparam file="$(find <your_package>)/routes/route.yaml" command="load"/>  -->
+
     <include file="$(find mp_behaviour_tests)/launch/navigation_test.launch" >
-        <!-- <rosparam file="$(find <your_package>)/routes/route.yaml" command="load"/>  -->
         <arg name="mode" default="$(arg mode)" />
     </include>
 </launch>

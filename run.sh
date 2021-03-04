@@ -9,7 +9,7 @@ S3_OUTPUT_APP_KEY=spottestdemo/bundle/output.tar
 S3_OUTPUT_ROBOT_KEY=spottestdemorobot/bundle/output.tar
 
 echo "###############################################################################"
-echo " CLOUD SUMMIT WORKSHOP: RUNNING SIMULATION JOBS WITH JSON CONFIGURATION "
+echo " RUNNING SIMULATION JOBS WITH JSON CONFIGURATION "
 echo " NOTE: This will take 1-2 minutes for a single robot simulation, 3-4 minutes for multiple robots "
 echo " Once this is running, open the RoboMaker console to watch for a change from Pending to Running "
 echo "###############################################################################"

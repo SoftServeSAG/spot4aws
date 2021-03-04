@@ -28,10 +28,3 @@ else
   aws cloudformation wait stack-update-complete --stack-name $STACK_NAME --profile $AWS_PROFILE && echo "stackname=$STACK_NAME" > .current-aws-stack
 
 fi
-
-# # Setup AWS resources for the application
-# if [ ! -f "$CURRENT_STACK" ]; then
-#   # Deploy base stack (NOTE: This will NOT deploy the SAM-based Lambda function. To do that, follow the instructions in the README.)
-#   aws cloudformation deploy --template-file $LAUNCHER_APP_DIR/base_template.yml --stack-name $STACK_NAME --capabilities CAPABILITY_NAMED_IAM --parameter-overrides SimulationApplicationS3Key=$S3_OUTPUT_APP_KEY RobotApplicationS3Key=$S3_OUTPUT_ROBOT_KEY --profile $AWS_PROFILE
-#   aws cloudformation wait stack-create-complete --stack-name $STACK_NAME --profile $AWS_PROFILE && echo "stackname=$STACK_NAME" > .current-aws-stack
-# fi

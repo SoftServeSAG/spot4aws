@@ -123,33 +123,6 @@ def lambda_handler(event, context):
     # To run locally on your machine based on CFN stack outputs.
 if __name__ == "__main__":
 
-#   sim_job_path = ".simulation_jobs"
-
-#   # check if we have run jobs
-#   try:
-#     with open(sim_job_path) as json_file:
-#       robomaker = boto3.client('robomaker')
-#       json_str = json.load(json_file)
-#       jobs = json.loads(json_str)
-
-#       try:
-#         print("Cancel simulation job")
-#         print(jobs['simulation_job'])
-#         if jobs['simulation_job'] is not None:
-#           robomaker.cancel_simulation_job(job=jobs['simulation_job'])
-#       except Exception as e:
-#         print(e)    
-      
-#       try:
-#         print("Cancel simulation batch job")
-#         print(jobs['simulation_batch'] )
-#         if jobs['simulation_batch'] is not None:
-#           robomaker.cancel_simulation_job_batch(batch=jobs['simulation_batch'])
-#       except Exception as e:
-#         print(e)    
-#   except Exception as e:
-#     print(e)
-
   if len(sys.argv) > 2:
     print("Using config file {}".format(sys.argv[2]))
     event_path = sys.argv[2]
@@ -196,9 +169,6 @@ if __name__ == "__main__":
   print("Starting handler")
   res = lambda_handler(event, {})
   print("Simulations launched. Check out the AWS console to connect to the fleet simulation.")
-  print("Created jobs:")
-  print(res['body'])
-  
   
 #   with open(sim_job_path, 'w') as outfile:
 #     json.dump(res['body'], outfile)

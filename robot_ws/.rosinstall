@@ -1,4 +1,16 @@
-- git: {local-name: src/deps/teleop_legged_robots, uri: "https://github.com/SoftServeSAG/teleop_legged_robots.git", version: "main"}
-- git: {local-name: src/deps/champ_teleop, uri: "https://github.com/chvmp/champ_teleop.git", version: "master"}
-- git: {local-name: src/deps/yocs_velocity_smoother, uri: "https://github.com/chvmp/yocs_velocity_smoother", version: "master"}
-- git: {local-name: src/deps/champ, uri: "https://github.com/chvmp/champ", version: "master"}
+- git:
+     local-name: src/deps/teleop_legged_robots
+     uri: "https://github.com/SoftServeSAG/teleop_legged_robots.git"
+     version: "main"
+- git:
+     local-name: src/deps/champ_teleop
+     uri: "https://github.com/chvmp/champ_teleop.git"
+     version: "master"
+- git:
+     local-name: src/deps/yocs_velocity_smoother
+     uri: "https://github.com/chvmp/yocs_velocity_smoother"
+     version: "master"
+- git:
+     local-name: src/deps/champ
+     uri: "https://github.com/chvmp/champ"
+     version: "master"

@@ -7,6 +7,5 @@
         <arg name="gui" default="$(arg gui)" />
     </include>
 
-
     <include file="$(find mp_slippage_and_motor_saturation_tests)/launch/standstill_test.launch" />
 </launch>

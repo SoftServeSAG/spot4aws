@@ -31,7 +31,7 @@ catkin_install_python(PROGRAMS
   scripts/gazebo_model_mover.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 
-install(DIRECTORY launch static_models_w_plugin rviz 
+install(DIRECTORY launch static_models_w_plugin
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
 
 install(TARGETS move_object_plugin

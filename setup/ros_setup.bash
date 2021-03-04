@@ -1,12 +1,13 @@
 #!/bin/bash
 
 echo "###############################################################################"
-echo " CLOUD SUMMIT WORKSHOP: INSTALL STEP 1: SETTING UP CUSTOM ROSDEP "
-echo " This section will take about 30 seconds to a minute. "
+echo "ROS environment setup starting.."
 echo "###############################################################################"
 
 BASE_DIR=`pwd`
-APP_DIR=$BASE_DIR/simulation_ws
+ROS_APP_DIR=$BASE_DIR/simulation_ws
+ROS_ROBOT_DIR=$BASE_DIR/robot_ws
+
 
 # Wait if apt is running. 
 while :
@@ -42,20 +43,34 @@ else
     fi
 fi
 
-# echo "###############################################################################"
-# echo " CLOUD SUMMIT WORKSHOP: INSTALL STEP 2: DOWNLOADING, INSTALLING DEPENDENCIES"
-# echo " This section will take 3-4 minutes to a minute. "
-# echo "###############################################################################"
+ echo "###############################################################################"
+ echo " DOWNLOADING, INSTALLING DEPENDENCIES"
+ echo " This section will take 3-4 minutes to a minute. "
+ echo "###############################################################################"
 
-# cd $APP_DIR
-# rosws update
-# rosdep update
-# rosdep install --from-paths src --ignore-src -r -y
+ cd $ROS_APP_DIR
+ rosws update
+ ./install_additional_deps.sh
+ rosdep update
+ rosdep install --from-paths src --ignore-src -r -y
 
-# echo "###############################################################################"
-# echo " CLOUD SUMMIT WORKSHOP: INSTALL STEP 3: RUNNING INITIAL COLCON BUILD/BUNDLE "
-# echo " This section will take a minute or two. "
-# echo "###############################################################################"
+ cd $ROS_ROBOT_DIR
+ rosws update
+ ./install_additional_deps.sh
+ rosdep update
+ rosdep install --from-paths src --ignore-src -r -y
 
-# colcon build
-# colcon bundle
+ echo "###############################################################################"
+ echo " RUNNING INITIAL COLCON BUILD/BUNDLE "
+ echo " This section will take a minute or two. "
+ echo "###############################################################################"
+
+ echo " RUNNING INITIAL COLCON BUILD/BUNDLE FOR SIMULATION APPLICATION "
+ cd $ROS_APP_DIR
+ colcon build
+ colcon bundle
+
+ echo " RUNNING INITIAL COLCON BUILD/BUNDLE FOR ROBOT APPLICATION "
+ cd $ROS_ROBOT_DIR
+ colcon build
+ colcon bundle
