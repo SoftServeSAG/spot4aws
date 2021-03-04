@@ -1,5 +1,6 @@
 <launch>
     <arg name="gui" default="false"/>
+    <arg name="path_topic" default="/move_base/GlobalPlanner/plan"/>
     
     <param name="use_sim_time" value="true" />
 
@@ -14,5 +15,6 @@
     </node>
 
     <include file="$(find mp_behaviour_tests)/launch/obstacle_avoidance_test.launch" >
+        <arg name="path_topic" value="$(arg path_topic)"/>
     </include>
 </launch>
