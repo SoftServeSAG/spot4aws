@@ -1,0 +1,88 @@
+{
+   "scenarios":{
+      "Scenario1":{
+         "simEnvironmentVariables":{
+            "MODEL_NAME":"/",
+            "START_X":"0",
+            "START_Y":"0",
+            "START_Z":"0.0",
+            "START_YAW":"0",
+            "USE_CUSTOM_MOVE_OBJECT_GAZEBO_PLUGIN":"true",
+            "S3_BUCKET":"spottestboro-robomakerbasics3bucket-sqoh8w6aeu0p",
+            "MAPPING":"false",
+            "ROBOT_MONITORING":"false",
+            "ROBOT_TESTING":"false"
+         },
+         "robotEnvironmentVariables":{
+            "MODEL_NAME":"/",
+            "START_X":"0",
+            "START_Y":"0",
+            "START_Z":"0.0",
+            "START_YAW":"0",
+            "USE_CUSTOM_MOVE_OBJECT_GAZEBO_PLUGIN":"true",
+            "S3_BUCKET":"spottestboro-robomakerbasics3bucket-sqoh8w6aeu0p",
+            "MAPPING":"false",
+            "ROBOT_MONITORING":"false",
+            "ROBOT_TESTING":"false"
+         }
+      },
+      "Scenario2":{
+         "simEnvironmentVariables":{
+            "MODEL_NAME":"/",
+            "START_X":"-1.5",
+            "START_Y":"7.2",
+            "START_Z":"0.0",
+            "START_YAW":"1",
+            "USE_CUSTOM_MOVE_OBJECT_GAZEBO_PLUGIN":"true",
+            "S3_BUCKET":"spottestboro-robomakerbasics3bucket-sqoh8w6aeu0p",
+            "MAPPING":"false",
+            "ROBOT_MONITORING":"false",
+            "ROBOT_TESTING":"false"
+         },
+         "robotEnvironmentVariables":{
+            "MODEL_NAME":"/",
+            "START_X":"-1.5",
+            "START_Y":"7.2",
+            "START_Z":"0.0",
+            "START_YAW":"1",
+            "USE_CUSTOM_MOVE_OBJECT_GAZEBO_PLUGIN":"true",
+            "S3_BUCKET":"spottestboro-robomakerbasics3bucket-sqoh8w6aeu0p",
+            "MAPPING":"false",
+            "ROBOT_MONITORING":"false",
+            "ROBOT_TESTING":"false"
+         }
+      }
+   },
+   "simulations":[
+      {
+         "scenarios":[
+            "Scenario2"
+         ],
+         "params":{
+            "failureBehavior": "Fail",
+			   "maxJobDurationInSeconds": 600,
+            "simulationApplications":[
+               {
+                  "applicationVersion": "$LATEST",
+                  "launchConfig":{
+                     "launchFile":"standstill_test.launch",
+                     "packageName":"rs_tests"
+                  }
+               }
+            ],
+            "robotApplications":[
+               {
+                  "applicationVersion": "$LATEST",
+                  "launchConfig":{
+                     "launchFile":"standstill_test.launch",
+                     "packageName":"rs_robot_tests"
+                  }
+               }
+            ],
+            "vpcConfig": {
+				   "assignPublicIp": true
+            }
+         }
+      }
+   ]
+}
