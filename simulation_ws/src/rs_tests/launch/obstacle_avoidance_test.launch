@@ -1,0 +1,22 @@
+<launch>
+    <arg name="gui" default="false"/>
+    <arg name="path_topic" default="/move_base/GlobalPlanner/plan"/>
+    
+    <param name="use_sim_time" value="true" />
+
+    <!-- Launch the Gazebo world -->
+    <include file="$(find aws_robomaker_small_house_world)/launch/small_house.launch">
+        <arg name="gui" default="$(arg gui)"/>
+    </include>
+
+    <!-- Spawn the robot -->
+    <include file="$(find rs_config)/launch/spawn_robot.launch" />
+
+    <!-- launch the route manager -->
+    <node pkg="softserve_simulation_common" type="move_base_route_manager.py" name="move_base_route_manager" output="screen">
+    </node>
+
+    <include file="$(find mp_behaviour_tests)/launch/obstacle_avoidance_test.launch" >
+        <arg name="path_topic" value="$(arg path_topic)"/>
+    </include>
+</launch>

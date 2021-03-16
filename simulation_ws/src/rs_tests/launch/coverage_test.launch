@@ -1,0 +1,24 @@
+<launch>
+    <arg name="gui" default="false"/>
+
+    <!-- arguments for coverage map -->
+    <arg name="coverage_area_offset" default="-9.500000 -5.500000 0 0 0 0"/>
+    <arg name="coverage_area_size_x" default="19"/>
+    <arg name="coverage_area_size_y" default="11"/>
+
+    <!-- Launch the Gazebo world -->
+    <include file="$(find aws_robomaker_small_house_world)/launch/small_house.launch">
+        <arg name="gui" default="$(arg gui)"/>
+    </include>
+
+    <!-- Spawn the robot -->
+    <include file="$(find rs_config)/launch/spawn_robot.launch" />
+
+    <!-- Launch test -->
+    <include file="$(find mp_behaviour_tests)/launch/coverage_test.launch">
+        <arg name="coverage_area_offset" value="$(arg coverage_area_offset)"/>
+        <arg name="coverage_area_size_x" value="$(arg coverage_area_size_x)"/>
+        <arg name="coverage_area_size_y" value="$(arg coverage_area_size_y)"/>
+    </include>
+
+</launch>

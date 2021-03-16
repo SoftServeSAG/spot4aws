@@ -1,0 +1,73 @@
+objects:
+  - object:
+      name: "SofaC_01_001"
+      pose:
+        position:
+          x: -4.6
+          y: -3.87
+          z: 0.065992
+        orientation:
+          x: 0.0
+          y: 0.0
+          z: 0.786004101266
+          w: 0.787742944889
+  - object:
+      name: "KitchenTable_01_001"
+      pose:
+        position:
+          x: 6.58
+          y: -4.28
+          z: 0.0
+        orientation:
+          x: 0.0
+          y: 0.0
+          z: 0.786004101266
+          w: -0.787742944889
+  - object:
+      name: "Bed_01_001"
+      pose:
+        position:
+          x: -6.16
+          y: -0.25
+          z: 0.0
+        orientation:
+          x: 0.0
+          y: 0.0
+          z: 0.786004101266
+          w: -0.787742944889
+  - object:
+      name: "Refrigerator_01_001"
+      pose:
+        position:
+          x: 8.84
+          y: 2.28
+          z: 0.0
+        orientation:
+          x: 0.0
+          y: 0.0
+          z: 0.616004101266
+          w: 0.787742944889
+  - object:
+      name: "Wardrobe_01_001"
+      pose:
+        position:
+          x: -1.834
+          y: 1.87
+          z: 0.0
+        orientation:
+          x: 0.0
+          y: 0.0
+          z: 0.786004101266
+          w: 0.787742944889
+  - object:
+      name: "ReadingDesk_01_001"
+      pose:
+        position:
+          x: -8.753
+          y: -2.85
+          z: 0.0
+        orientation:
+          x: 0.0
+          y: 0.0
+          z: 0.786004101266
+          w: 0.787742944889

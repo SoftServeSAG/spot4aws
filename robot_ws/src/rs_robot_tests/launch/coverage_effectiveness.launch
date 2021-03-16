@@ -1,0 +1,16 @@
+<launch>
+
+    <arg name="gui" default="false"/>
+
+    <arg name="map" default="$(find aws_robomaker_small_house_world)/maps/turtlebot3_waffle_pi/map.yaml"/>
+
+    <!-- Remap cmd_vel to support move_base_flex -->
+    <remap from="move_base/cmd_vel" to="/cmd_vel"/>
+
+    <!-- Start full coverage planner -->
+    <include file="$(find rs_navigation)/launch/coverage_demo.launch">
+        <arg name="rviz" value="$(arg gui)" />
+        <arg name="map" value="$(arg map)" />
+    </include>
+
+</launch>
