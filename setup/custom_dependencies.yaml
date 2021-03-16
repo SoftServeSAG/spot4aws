@@ -1,4 +1,0 @@
-roslibpy-pip:
-  ubuntu:
-    pip:
-      packages: [roslibpy]
