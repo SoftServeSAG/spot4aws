@@ -1,5 +1,7 @@
 <launch>
     <arg name="gui" default="false"/>
+    
+    <param name="use_sim_time" value="true" />
 
     <!-- arguments for coverage map -->
     <arg name="coverage_area_offset" default="-9.500000 -5.500000 0 0 0 0"/>

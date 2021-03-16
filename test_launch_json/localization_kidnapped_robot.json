@@ -6,7 +6,12 @@
             "START_X":"0",
             "START_Y":"0",
             "START_Z":"0.0",
-            "START_YAW":"0"
+            "START_YAW":"0",
+            "ROBOT_LOCALIZATION_KIDNAPPED_TEST_START_TIME_SECONDS":"5",
+            "ROBOT_LOCALIZATION_KIDNAPPED_TEST_POSITION_TOLERANCE":"0.5",
+            "ROBOT_LOCALIZATION_KIDNAPPED_TEST_ORIENTATION_TOLERANCE":"0.3",
+            "ROBOT_LOCALIZATION_KIDNAPPED_TEST_MODE":"dynamic",
+            "ROBOT_LOCALIZATION_KIDNAPPED_TEST_NAVIGATION_SUCCESS_COUNT":"5"
          },
          "robotEnvironmentVariables":{
             "MODEL_NAME":"/",
@@ -19,15 +24,20 @@
       "Scenario2":{
          "simEnvironmentVariables":{
             "MODEL_NAME":"/",
-            "START_X":"-1.5",
-            "START_Y":"7.2",
+            "START_X":"5.4",
+            "START_Y":"-2.2",
             "START_Z":"0.0",
-            "START_YAW":"1"
+            "START_YAW":"1",
+            "ROBOT_LOCALIZATION_KIDNAPPED_TEST_START_TIME_SECONDS":"5",
+            "ROBOT_LOCALIZATION_KIDNAPPED_TEST_POSITION_TOLERANCE":"0.5",
+            "ROBOT_LOCALIZATION_KIDNAPPED_TEST_ORIENTATION_TOLERANCE":"0.3",
+            "ROBOT_LOCALIZATION_KIDNAPPED_TEST_MODE":"dynamic",
+            "ROBOT_LOCALIZATION_KIDNAPPED_TEST_NAVIGATION_SUCCESS_COUNT":"5"
          },
          "robotEnvironmentVariables":{
             "MODEL_NAME":"/",
-            "START_X":"-1.5",
-            "START_Y":"7.2",
+            "START_X":"5.4",
+            "START_Y":"-2.2",
             "START_Z":"0.0",
             "START_YAW":"1"
          }
@@ -36,7 +46,7 @@
    "simulations":[
       {
          "scenarios":[
-            "Scenario2"
+            "Scenario1"
          ],
          "params":{
             "failureBehavior": "Fail",

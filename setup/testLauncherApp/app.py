@@ -168,7 +168,7 @@ if __name__ == "__main__":
     
   print("Starting handler")
   res = lambda_handler(event, {})
-  print("Simulations launched. Check out the AWS console to connect to the fleet simulation.")
+  print("Simulations launched. Check out the AWS console to connect to the simulation.")
   
 #   with open(sim_job_path, 'w') as outfile:
 #     json.dump(res['body'], outfile)

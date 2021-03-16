@@ -23,14 +23,6 @@ if [ $# -eq 0 ]
     fail "Can not launch application. You need to supply the path to your JSON configuration file. eg: run.sh launch_single.json"
 fi
 
-running=$(aws robomaker list-simulation-jobs --profile $AWS_PROFILE --filters name="status",values="Running")
-empty="\"simulationJobSummaries\": []"
-
-if [[ ! $running == *"$empty"* ]]
-then
-   fail "There are still simulations running. Please click on the robomaker console and cancel the running simulations before continuing."
-fi
-
 echo "Upload the simulation application bundle."
 s3Bucket=$(aws cloudformation describe-stacks --stack-name $STACK_NAME --query "Stacks[0].Outputs[?OutputKey=='RoboMakerS3Bucket'].OutputValue" --profile $AWS_PROFILE --output text)
 
@@ -56,8 +48,8 @@ read -t 15 -p "Press any key to launch the sample simulation, or Ctrl-C to exit.
 
 if [ "$#" -eq  "0" ]
  then
-   python3 $LAUNCHER_APP_DIR/testLauncherApp/app.py $STACK_NAME 
+   python3 $LAUNCHER_APP_DIR/app.py $STACK_NAME 
 else
-   python3 $LAUNCHER_APP_DIR/testLauncherApp/app.py $STACK_NAME $BASE_DIR/$1
+   python3 $LAUNCHER_APP_DIR/app.py $STACK_NAME $BASE_DIR/$1
 fi
 

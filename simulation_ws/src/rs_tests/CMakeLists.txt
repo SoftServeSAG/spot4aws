@@ -6,5 +6,5 @@ find_package(catkin REQUIRED COMPONENTS roslaunch)
 catkin_package()
 
 install(
-  DIRECTORY launch params routes
+  DIRECTORY launch params
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})

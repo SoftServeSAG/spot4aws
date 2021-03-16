@@ -1,6 +1,8 @@
 <launch>
 
     <arg name="gui" default="false"/>
+    
+    <param name="use_sim_time" value="true" />
 
     <arg name="map" default="$(find aws_robomaker_small_house_world)/maps/turtlebot3_waffle_pi/map.yaml"/>
 

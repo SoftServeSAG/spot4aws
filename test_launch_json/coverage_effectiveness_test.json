@@ -7,10 +7,10 @@
             "START_Y":"0",
             "START_Z":"0.0",
             "START_YAW":"0",
-            "ROBOT_STRAIGHT_LINE_TEST_START_TIME_SECONDS":"5",
-            "ROBOT_STRAIGHT_LINE_TEST_DISTANCE":"5.0",
-            "ROBOT_STRAIGHT_LINE_TEST_LINEAR_SPEED_X":"0.2",
-            "ROBOT_STRAIGHT_LINE_TEST_TOLERANCE":"0.2"
+            "ROBOT_COVERAGE_EFFECTIVENESS_TEST_COVERAGE_GOAL":"80",
+            "ROBOT_COVERAGE_EFFECTIVENESS_TEST_POINT_MAX_VISITS":"3",
+            "ROBOT_COVERAGE_EFFECTIVENESS_TEST_MAX_DEVIATION":"1",
+            "ROBOT_COVERAGE_EFFECTIVENESS_TEST_POINT_MAX_DIFFERENCE":"3"
          },
          "robotEnvironmentVariables":{
             "MODEL_NAME":"/",
@@ -23,21 +23,18 @@
       "Scenario2":{
          "simEnvironmentVariables":{
             "MODEL_NAME":"/",
-            "START_X":"5.4",
-            "START_Y":"-2.2",
+            "START_X":"0",
+            "START_Y":"0",
             "START_Z":"0.0",
-            "START_YAW":"1",
-            "ROBOT_STRAIGHT_LINE_TEST_START_TIME_SECONDS":"5",
-            "ROBOT_STRAIGHT_LINE_TEST_DISTANCE":"5.0",
-            "ROBOT_STRAIGHT_LINE_TEST_LINEAR_SPEED_X":"0.2",
-            "ROBOT_STRAIGHT_LINE_TEST_TOLERANCE":"0.2"
+            "START_YAW":"0",
+            "ROBOT_COVERAGE_EFFECTIVENESS_TEST_COVERAGE_GOAL":"10"
          },
          "robotEnvironmentVariables":{
             "MODEL_NAME":"/",
-            "START_X":"5.4",
-            "START_Y":"-2.2",
+            "START_X":"0",
+            "START_Y":"0",
             "START_Z":"0.0",
-            "START_YAW":"1"
+            "START_YAW":"0"
          }
       }
    },
@@ -53,7 +50,7 @@
                {
                   "applicationVersion": "$LATEST",
                   "launchConfig":{
-                     "launchFile":"straight_line_test.launch",
+                     "launchFile":"coverage_effectiveness.launch",
                      "packageName":"rs_tests"
                   }
                }
@@ -62,7 +59,7 @@
                {
                   "applicationVersion": "$LATEST",
                   "launchConfig":{
-                     "launchFile":"straight_line_test.launch",
+                     "launchFile":"coverage_effectiveness.launch",
                      "packageName":"rs_robot_tests"
                   }
                }
