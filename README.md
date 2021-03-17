@@ -41,7 +41,7 @@ scenarios for tests available in package [aws_ros_tests](https://github.com/Soft
 which includes the test types as: slippage and motor saturation tests, planning tests, behaviour tests, localization tests.
 
 For example, the .json file to configure coverage test given below.The coverage test shows the efficiency of the robot's ability to cover the floor of the environment. 
-Here, the test-related parameter is **ROBOT_COVERAGE_TEST_COVERAGE_GOAL** which determines the to coverage goal. You can set the different goal values in different scenarios.
+Here, the test-related parameter is **ROBOT_COVERAGE_TEST_COVERAGE_GOAL** which determines the coverage goal. You can set the different goal values in different scenarios.
 
 ```json
 {
@@ -126,9 +126,9 @@ cd ~/environment/aws_ros_tests
 For example, run the coverage test:
 ```
 cd ~/environment/aws_ros_tests
-./run.sh test_launch_json/coverage_test.json.json
+./run.sh test_launch_json/coverage_test.json
 ```
-This command launches two Simulation Jobs picking parameters determined in .json file for two scenarios. 
+This command launches two Simulation Jobs picking parameters determined in **coverage_test.json** file for two scenarios. 
 When the jobs complete, you will see the test results tagged to the simulation jobs.
 
 ## Cleanup
