@@ -1,5 +1,5 @@
 <launch>
-    <arg name="gui" default="false"/>
+    <arg name="gui" default="true"/>
     <!-- set the small values for covariances to make amcl relies on initial pose values -->
     <arg name="initial_cov_xx" default="0.0001" />
     <arg name="initial_cov_yy" default="0.0001" />

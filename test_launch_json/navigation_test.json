@@ -3,17 +3,17 @@
       "Scenario1":{
          "simEnvironmentVariables":{
             "MODEL_NAME":"/",
-            "START_X":"0",
-            "START_Y":"0",
+            "START_X":"0.0",
+            "START_Y":"0.0",
             "START_Z":"0.0",
-            "START_YAW":"0"
+            "START_YAW":"0.0"
          },
          "robotEnvironmentVariables":{
             "MODEL_NAME":"/",
-            "START_X":"0",
-            "START_Y":"0",
+            "START_X":"0.0",
+            "START_Y":"0.0",
             "START_Z":"0.0",
-            "START_YAW":"0"
+            "START_YAW":"0.0"
          }
       },
       "Scenario2":{

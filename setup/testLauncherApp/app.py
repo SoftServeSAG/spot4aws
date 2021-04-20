@@ -9,6 +9,9 @@ import sys
 client = boto3.client('robomaker')
 
 DEFAULT_MAX_DURATION = 3600
+DEFAULT_STREAM_UI_SIMULATION_APP = False
+DEFAULT_STREAM_UI_ROBOT_APP = True
+
 
 app_arn = os.getenv('SIM_APPLICATION_ARN')
 robot_arn = os.getenv('ROBOT_APPLICATION_ARN')
@@ -74,6 +77,7 @@ def lambda_handler(event, context):
     
         simulation['params']['vpcConfig']['assignPublicIp'] = True
         
+        
         for x, scenario in enumerate(simulation['scenarios']):
             
             if scenario in event['scenarios'].keys():
@@ -87,14 +91,17 @@ def lambda_handler(event, context):
         
                     
                 for z, simApp in enumerate(_sim_params['simulationApplications']):
+                    _sim_params['simulationApplications'][z]['launchConfig']['streamUI'] = DEFAULT_STREAM_UI_SIMULATION_APP
                     _sim_params['simulationApplications'][z]['launchConfig']['environmentVariables'] = event['scenarios'][scenario]['simEnvironmentVariables']
                     if 'SIMULATION_APP_ARN' in os.environ and not 'application' in _sim_params['simulationApplications'][z]:
                         _sim_params['simulationApplications'][z]['application'] = os.getenv('SIMULATION_APP_ARN')
                 for z, simApp in enumerate(_sim_params['robotApplications']):
+                    _sim_params['robotApplications'][z]['launchConfig']['streamUI'] = DEFAULT_STREAM_UI_ROBOT_APP
                     _sim_params['robotApplications'][z]['launchConfig']['environmentVariables'] = event['scenarios'][scenario]['robotEnvironmentVariables']
                    
                     if 'ROBOT_APP_ARN' in os.environ and not 'application' in _sim_params['robotApplications'][z]:
                         _sim_params['robotApplications'][z]['application'] = os.getenv('ROBOT_APP_ARN')
+                
                 
                 print('Adding following job: ' + json.dumps(_sim_params))
                 
