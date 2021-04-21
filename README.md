@@ -32,9 +32,9 @@ Please make sure you have these permissions in your account before proceeding fu
    - Runs initial colcon build and colcon bundle operations.
    - Deploys the cloudformation stack to setup the AWS resources (IAM roles, VPC, etc).
 
-# Run test
+## Run test
 
-1. Configure scenarios in .json files.
+### 1. Configure scenarios in .json files.
 
 In order to launch test, the scenarios should be configured. Directory **test_launch_json** consists of the predefined 
 scenarios for tests available in package [aws_ros_tests](https://github.com/SoftServeSAG/aws_ros_tests),
@@ -116,7 +116,7 @@ Here, the test-related parameter is **ROBOT_COVERAGE_TEST_COVERAGE_GOAL** which 
    ]
 }
 ```
-2. Run test
+### 2. Run test
 
 In order to run test, execute the following command:
 ```
