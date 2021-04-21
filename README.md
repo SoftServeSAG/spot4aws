@@ -34,7 +34,7 @@ Please make sure you have these permissions in your account before proceeding fu
 
 ## Run test
 
-### 1. Configure scenarios in .json files.
+### 1. Configure scenarios in JSON files.
 
 In order to launch test, the scenarios should be configured. Directory **test_launch_json** consists of the predefined 
 scenarios for tests available in package [aws_ros_tests](https://github.com/SoftServeSAG/aws_ros_tests),
