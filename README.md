@@ -40,7 +40,7 @@ In order to launch test, the scenarios should be configured. Directory **test_la
 scenarios for tests available in package [aws_ros_tests](https://github.com/SoftServeSAG/aws_ros_tests),
 which includes the test types as: slippage and motor saturation tests, planning tests, behaviour tests, localization tests.
 
-For example, the .json file to configure coverage test given below.The coverage test shows the efficiency of the robot's ability to cover the floor of the environment. 
+For example, the coverage_test.json file to configure coverage test given below.The coverage test shows the efficiency of the robot's ability to cover the floor of the environment. 
 Here, the test-related parameter is **ROBOT_COVERAGE_TEST_COVERAGE_GOAL** which determines the coverage goal. You can set the different goal values in different scenarios.
 
 ```json
