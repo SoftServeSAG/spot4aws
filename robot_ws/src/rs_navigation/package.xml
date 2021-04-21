@@ -2,7 +2,7 @@
 <package format="2">
   <name>rs_navigation</name>
   <version>0.1.0</version>
-  <description>Spot  Config Package</description>
+  <description>Spot Navigation Package</description>
 
   <maintainer email="tboro@ssoftserveinc.com">Taras Borovets</maintainer>
   <author>Taras Borovets</author>
