@@ -5,7 +5,7 @@
 - git:
     local-name: src/deps/champ
     uri: "https://github.com/chvmp/champ"
-    version: "master"
+    version: "db5f936e5171a097e68339adffa92366bb52fa3e"
 - git: 
     local-name: src/deps/aws_robomaker_small_house_world 
     uri: "https://github.com/aws-robotics/aws-robomaker-small-house-world.git"

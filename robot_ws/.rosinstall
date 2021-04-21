@@ -13,7 +13,7 @@
 - git:
      local-name: src/deps/champ
      uri: "https://github.com/chvmp/champ"
-     version: "master"
+     version: "db5f936e5171a097e68339adffa92366bb52fa3e"
 - git:
     uri: https://github.com/nobleo/full_coverage_path_planner.git
     local-name: src/deps/full_coverage_path_planner
